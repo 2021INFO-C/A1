@@ -1,9 +1,10 @@
-FROM python:3.7
+FROM busybox:latest
 
 WORKDIR /usr/src/app
 
-COPY Python_A1.py .
+COPY run.sh .
 
-CMD ["./Python_A1.py"]
+CMD ["./run.sh"]
 
-ENTRYPOINT ["python3", "Python_A1.py"]
+ENTRYPOINT ["run.sh"]
+
